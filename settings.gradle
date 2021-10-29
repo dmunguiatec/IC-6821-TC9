@@ -1,0 +1,2 @@
+include 'checks'
+rootProject.name = 'IC-6821-TC9'

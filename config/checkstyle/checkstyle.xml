@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!--
+  Checkstyle configuration that checks the sun coding conventions from:
+    - the Java Language Specification at
+      https://docs.oracle.com/javase/specs/jls/se11/html/index.html
+    - the Sun Code Conventions at https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
+    - the Javadoc guidelines at
+      https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
+    - the JDK Api documentation https://docs.oracle.com/en/java/javase/11/
+    - some best practices
+  Checkstyle is very configurable. Be sure to read the documentation at
+  https://checkstyle.org (or in your downloaded distribution).
+  Most Checks are configurable, be sure to consult the documentation.
+  To completely disable a check, just comment it out or delete it from the file.
+  To suppress certain violations please review suppression filters.
+  Finally, it is worth reading the documentation.
+-->
+
+<module name="Checker">
+    <!--
+        If you set the basedir property below, then all reported file
+        names will be relative to the specified directory. See
+        https://checkstyle.org/config.html#Checker
+        <property name="basedir" value="${basedir}"/>
+    -->
+    <property name="severity" value="error"/>
+
+    <property name="fileExtensions" value="java, properties, xml"/>
+
+    <!-- Excludes all 'module-info.java' files              -->
+    <!-- See https://checkstyle.org/config_filefilters.html -->
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="module\-info\.java$"/>
+    </module>
+
+    <!-- https://checkstyle.org/config_filters.html#SuppressionFilter -->
+    <module name="SuppressionFilter">
+        <property name="file" value="${org.checkstyle.sun.suppressionfilter.config}"
+                  default="checkstyle-suppressions.xml"/>
+        <property name="optional" value="true"/>
+    </module>
+
+    <!-- Checks whether files end with a new line.                        -->
+    <!-- See https://checkstyle.org/config_misc.html#NewlineAtEndOfFile -->
+    <module name="NewlineAtEndOfFile"/>
+
+    <!-- Checks that property files contain the same keys.         -->
+    <!-- See https://checkstyle.org/config_misc.html#Translation -->
+    <module name="Translation"/>
+
+    <!-- Checks for Size Violations.                    -->
+    <!-- See https://checkstyle.org/config_sizes.html -->
+    <module name="FileLength"/>
+    <module name="LineLength">
+        <property name="fileExtensions" value="java"/>
+        <property name="max" value="120"/>
+    </module>
+
+    <!-- Checks for whitespace                               -->
+    <!-- See https://checkstyle.org/config_whitespace.html -->
+    <module name="FileTabCharacter"/>
+
+    <!-- Miscellaneous other checks.                   -->
+    <!-- See https://checkstyle.org/config_misc.html -->
+    <!--<module name="RegexpSingleline">
+        <property name="format" value="\s+$"/>
+        <property name="minimum" value="0"/>
+        <property name="maximum" value="0"/>
+        <property name="message" value="Line has trailing spaces."/>
+    </module>-->
+
+    <!-- Checks for Headers                                -->
+    <!-- See https://checkstyle.org/config_header.html   -->
+    <!-- <module name="Header"> -->
+    <!--   <property name="headerFile" value="${checkstyle.header.file}"/> -->
+    <!--   <property name="fileExtensions" value="java"/> -->
+    <!-- </module> -->
+
+    <module name="TreeWalker">
+
+        <!-- Checks for Naming Conventions.                  -->
+        <!-- See https://checkstyle.org/config_naming.html -->
+        <module name="ConstantName"/>
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+
+        <!-- Checks for imports                              -->
+        <!-- See https://checkstyle.org/config_imports.html -->
+        <module name="AvoidStarImport"/>
+        <module name="IllegalImport"/> <!-- defaults to sun.* packages -->
+        <module name="RedundantImport"/>
+        <module name="UnusedImports">
+            <property name="processJavadoc" value="false"/>
+        </module>
+
+        <!-- Checks for Size Violations.                    -->
+        <!-- See https://checkstyle.org/config_sizes.html -->
+        <module name="MethodLength"/>
+        <module name="ParameterNumber">
+            <property name="tokens" value="METHOD_DEF"/>
+        </module>
+
+        <!-- Checks for whitespace                               -->
+        <!-- See https://checkstyle.org/config_whitespace.html -->
+        <module name="EmptyForIteratorPad"/>
+        <module name="GenericWhitespace"/>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap"/>
+        <module name="ParenPad"/>
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround"/>
+
+        <!-- Modifier Checks                                    -->
+        <!-- See https://checkstyle.org/config_modifiers.html -->
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+
+        <!-- Checks for blocks. You know, those {}'s         -->
+        <!-- See https://checkstyle.org/config_blocks.html -->
+        <module name="AvoidNestedBlocks"/>
+        <module name="EmptyBlock"/>
+        <module name="EmptyCatchBlock"/>
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+        <module name="RightCurly"/>
+
+        <!-- Checks for common coding problems               -->
+        <!-- See https://checkstyle.org/config_coding.html -->
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="HiddenField">
+            <property name="ignoreConstructorParameter" value="true"/>
+        </module>
+        <module name="IllegalInstantiation"/>
+        <module name="InnerAssignment"/>
+        <module name="MagicNumber"/>
+        <module name="MissingSwitchDefault"/>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="ParameterAssignment"/>
+
+        <!-- Checks for class design                         -->
+        <!-- See https://checkstyle.org/config_design.html -->
+        <module name="DesignForExtension"/>
+        <module name="FinalClass"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="InterfaceIsType"/>
+        <module name="VisibilityModifier"/>
+
+        <!-- Miscellaneous other checks.                   -->
+        <!-- See https://checkstyle.org/config_misc.html -->
+        <module name="ArrayTypeStyle"/>
+        <module name="FinalParameters">
+            <property name="tokens" value="CTOR_DEF"/>
+        </module>
+        <module name="TodoComment"/>
+        <module name="UpperEll"/>
+
+        <!-- https://checkstyle.org/config_filters.html#SuppressionXpathFilter -->
+        <module name="SuppressionXpathFilter">
+            <property name="file" value="${org.checkstyle.sun.suppressionxpathfilter.config}"
+                      default="checkstyle-xpath-suppressions.xml"/>
+            <property name="optional" value="true"/>
+        </module>
+
+        <module name="NPathComplexity"/>
+        <module name="JavaNCSS"/>
+
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="(.*)\.printStackTrace()"/>
+            <property name="message"
+                      value="[IC-6821] las excepciones deben ser manejadas apropiadamente (ej. lanzadas hacia arriba, o enviadas al log)"/>
+            <property name="ignoreComments" value="true"/>
+        </module>
+
+        <module name="FinalLocalVariable"/>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="ExternalUserService"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="integration"/>
+            <property name="interfaceMethods" value="pull:List&lt;User&gt;"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="JsonPlaceholderExternalUserService"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="jsonplaceholder"/>
+            <property name="implementsInterfaces" value="ExternalUserService"/>
+            <property name="privateFields"
+                      value="baseUrl:String,externalUserMapper:BeanMapper&lt;ExternalUserDTO~User&gt;,restTemplate:RestTemplate"/>
+            <property name="classAnnotations" value="Service"/>
+            <property name="constructorAnnotations" value="Autowired"/>
+            <property name="publicConstructors"
+                      value="(:String;:BeanMapper&lt;ExternalUserDTO~User&gt;;:RestTemplate)"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="ExternalUserMapper"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="integration"/>
+            <property name="implementsInterfaces" value="BeanMapper"/>
+            <property name="publicMethods" value="map(:ExternalUserDTO):User"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="ExternalPostService"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="integration"/>
+            <property name="interfaceMethods" value="pull:List&lt;Post&gt;"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="JsonPlaceholderExternalPostService"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="jsonplaceholder"/>
+            <property name="implementsInterfaces" value="ExternalPostService"/>
+            <property name="privateFields"
+                      value="baseUrl:String,externalPostMapper:BeanMapper&lt;ExternalPostDTO~Post&gt;,restTemplate:RestTemplate"/>
+            <property name="classAnnotations" value="Service"/>
+            <property name="constructorAnnotations" value="Autowired"/>
+            <property name="publicConstructors"
+                      value="(:String;:BeanMapper&lt;ExternalPostDTO~Post&gt;;:RestTemplate)"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="ExternalPostMapper"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="integration"/>
+            <property name="implementsInterfaces" value="BeanMapper"/>
+            <property name="publicMethods" value="map(:ExternalPostDTO):Post"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="ExternalPostDTO"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="integration"/>
+            <property name="privateFields"
+                      value="userId:Long,
+                             id:Long,
+                             title:String,
+                             body:String"/>
+            <property name="privateConstructors" value="()"/>
+            <property name="publicConstructors" value="(:Long;:Long;:String;:String)"/>
+            <property name="publicMethods"
+                      value="equals(:Object):boolean,
+                             hashCode():int,
+                             toString():String"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="HSQLDBUserDao"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="hsqldb"/>
+            <property name="implementsInterfaces" value="UserDao"/>
+            <property name="privateFields" value=":UserRowMapper"/>
+            <property name="publicConstructors" value="(:DataSource;:UserRowMapper)"/>
+            <property name="classAnnotations" value="Repository"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="UserRowMapper"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="users"/>
+            <property name="implementsInterfaces" value="RowMapper"/>
+            <property name="publicMethods" value="mapRow(:ResultSet;:int):User"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="HSQLDBPostDao"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="hsqldb"/>
+            <property name="implementsInterfaces" value="PostDao"/>
+            <property name="privateFields" value=":PostRowMapper"/>
+            <property name="publicConstructors" value="(:DataSource;:PostRowMapper)"/>
+            <property name="classAnnotations" value="Repository"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="PostRowMapper"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="posts"/>
+            <property name="implementsInterfaces" value="RowMapper"/>
+            <property name="publicMethods" value="mapRow(:ResultSet;:int):Post"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="SyncDataController"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="sync"/>
+            <property name="classAnnotations" value="RestController"/>
+            <property name="publicMethods" value="sync():SyncDataResultDTO"/>
+            <property name="publicConstructors" value="(:SyncDataService)"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="SyncDataService"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="sync"/>
+            <property name="interfaceMethods" value="sync():SyncDataResult"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="DefaultSyncDataService"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="sync"/>
+            <property name="implementsInterfaces" value="SyncDataService"/>
+            <property name="classAnnotations" value="Service"/>
+            <property name="privateFields" value=":ExternalUserService,:ExternalPostService,:UserDao,:PostDao"/>
+            <property name="publicConstructors" value="(:ExternalUserService;:ExternalPostService;:UserDao;:PostDao)"/>
+
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="PostController"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="posts"/>
+            <property name="classAnnotations" value="RestController"/>
+            <property name="publicConstructors" value="(:PostService)"/>
+            <property name="privateFields" value=":PostService"/>
+            <property name="publicMethods" value="findByExtId(:String):PostDTO"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="PostService"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="posts"/>
+            <property name="interfaceMethods"
+                      value="findByUserExtId(:String):Optional&lt;List&lt;Post&gt;&gt;,
+                             findByExtId(:String):Optional&lt;Post&gt;"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="DefaultPostService"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="posts"/>
+            <property name="classAnnotations" value="Service"/>
+            <property name="implementsInterfaces" value="PostService"/>
+            <property name="publicConstructors" value="(:UserDao;:PostDao)"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="UserController"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="users"/>
+            <property name="classAnnotations" value="RestController"/>
+            <property name="publicConstructors" value="(:UserService;:PostService)"/>
+            <property name="privateFields" value=":UserService,:PostService"/>
+            <property name="publicMethods"
+                      value="findPostsByUserExtId(:String):List&lt;PostDTO&gt;,
+                             findByUsername(:String):UserDTO"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="UserService"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="users"/>
+            <property name="interfaceMethods" value="findByUsername(:String):Optional&lt;User&gt;"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="DefaultUserService"/>
+            <property name="abstractionType" value="class"/>
+            <property name="packageName" value="users"/>
+            <property name="classAnnotations" value="Service"/>
+            <property name="implementsInterfaces" value="UserService"/>
+            <property name="privateFields" value=":UserDao"/>
+            <property name="publicConstructors" value="(:UserDao)"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="UserDao"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="users"/>
+            <property name="interfaceMethods"
+                      value="create(:User):User,
+                             create(:List&lt;User&gt;):int,
+                             findById(:Long):Optional&lt;User&gt;,
+                             findByExtId(:String):Optional&lt;User&gt;,
+                             findByIntegrationIds(:List&lt;Long&gt;):List&lt;User&gt;"/>
+        </module>
+        
+        <module name="edu.tec.ic6821.checks.StructureCheck">
+            <property name="name" value="PostDao"/>
+            <property name="abstractionType" value="interface"/>
+            <property name="packageName" value="posts"/>
+            <property name="interfaceMethods"
+                      value="create(:Post):Post,
+                             create(:List&lt;Post&gt;):int,
+                             findById(:Long):Optional&lt;Post&gt;,
+                             findByExtId(:String):Optional&lt;Post&gt;,
+                             getAll():List&lt;Post&gt;,
+                             findByUserId(:Long):List&lt;Post&gt;,
+                             findByIntegrationIds(:List&lt;Long&gt;):List&lt;Post&gt;"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.LayeredRestrictionsCheck">
+            <property name="names" value=".*Controller"/>
+            <property name="importRestrictions"
+                      value="java.sql.*,javax.sql.*,.*Dao,org.springframework.jdbc.*"/>
+            <property name="referenceRestrictions" value=".*Dao"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.LayeredRestrictionsCheck">
+            <property name="names" value=".*Service"/>
+            <property name="importRestrictions"
+                      value="java.sql.*,javax.sql.*,.*Controller,org.springframework.jdbc.*"/>
+            <property name="referenceRestrictions" value=".*Controller"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.LayeredRestrictionsCheck">
+            <property name="names" value=".*Dao"/>
+            <property name="importRestrictions"
+                      value=".*Controller,.*Service"/>
+            <property name="referenceRestrictions" value=".*Controller,.*Service"/>
+        </module>
+
+        <module name="edu.tec.ic6821.checks.ControllerRestrictionsCheck"/>
+
+    </module>
+
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="VisibilityModifier"/>
+        <property name="files" value=".*DTO\.java|Entity.java"/>
+    </module>
+
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value=".*"/>
+        <property name="files" value=".*Test\.java"/>
+    </module>
+
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="DesignForExtension"/>
+        <property name="files" value="Config.java|.*Dao.java|.*Service.java"/>
+    </module>
+
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="DesignForExtension|FinalClass|HideUtilityClassConstructor"/>
+        <property name="files" value="BlogApplication.java"/>
+    </module>
+
+    <module name="SuppressionSingleFilter">
+        <property name="checks" value="ParameterNumber"/>
+        <property name="files" value=".*DTO.java"/>
+    </module>
+
+
+</module>

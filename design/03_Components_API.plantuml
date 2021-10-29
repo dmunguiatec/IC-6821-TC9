@@ -1,0 +1,39 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title [Components] API
+
+Person(admin, "Admin", "A system administrator")
+
+Container(spa, "Single Page Application", "JS, React", "Blog user interface. Delivers content. Allows creators to manage content.")
+
+ContainerDb(db, "Relational Database", "In-Memory HyperSQL DataBase", "Stores blog data")
+Container_Boundary(api, "API") {
+    Component(syncService, "Sync Data Service", "Spring Bean", "Synchronizes users and posts data from external system")
+    Component(postController, "Blog Post Controller", "Spring MVC Controller", "Provides API endpoints to create and retrieve posts")
+    Component(userController, "User Controller", "Spring MVC Controller", "Provides API endpoints to retrieve users and posts related to users")
+    Component(syncController, "Sync Controller", "Spring MVC Controller", "Provides API endpoints to sync posts and users data from external system")
+    Component(postService, "Blog Post Service", "Spring Bean", "Implements functional requirements to create and retrieve posts")
+    Component(userService, "User Service", "Spring Bean", "Implements functional requirements to retrieve users")
+    Component(postRepository, "Blog Post Entities", "Spring JDBC", "Manages persistence and retrieval of posts data models")
+    Component(userRepository, "User Entities", "Spring JDBC", "Manages persistence and retrieval of users data models")
+
+    Rel(postController, postService, "Calls", "Java method")
+    Rel(userController, userService, "Calls", "Java method")
+    Rel(userController, postService, "Calls", "Java method")
+    Rel(postService, postRepository, "Calls", "Java method")
+    Rel(postService, userRepository, "Calls", "Java method")
+    Rel(userService, userRepository, "Calls", "Java method")
+    Rel(syncController, syncService, "Calls", "Java method")
+    Rel(syncService, postRepository, "Calls", "Java method")
+    Rel(syncService, userRepository, "Calls", "Java method")
+    Rel(postRepository, db, "Reads from and writes to", "JDBC")
+    Rel(userRepository, db, "Reads from and writes to", "JDBC")
+}
+
+System_Ext(jsonplaceholder, "Json Placeholder", "Legacy blog app")
+
+Rel(admin, syncController, "Triggers", "REST/HTTP")
+Rel(spa, postController, "Consumes", "REST/HTTP")
+Rel(syncService, jsonplaceholder, "Pulls users and posts data", "REST/HTTP")
+@enduml

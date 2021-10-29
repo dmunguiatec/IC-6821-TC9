@@ -1,0 +1,28 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title [Containers] Blog App
+
+Person(user, "Blogger", "A content creator")
+Person(admin, "Admin", "A system administrator")
+Person_Ext(anonymousUser, "Anonymous User", "A consumer of content")
+
+System_Boundary(blogapp, "Blog App") {
+    Container(webServer, "Web Server", "nginx", "Delivers the blog single page application")
+    Container(spa, "Single Page Application", "JS, React", "Blog user interface. Delivers content. Allows creators to manage content.")
+    ContainerDb(db, "Relational Database", "In-Memory HyperSQL DataBase", "Stores blog data")
+    Container(api, "API", "Java 11, Spring Boot 2.5", "Manages users and posts data")
+}
+
+System_Ext(jsonplaceholder, "Json Placeholder", "Legacy blog app")
+
+Rel(user, webServer, "Entrypoint", "HTTP")
+Rel(anonymousUser, webServer, "Entrypoint", "HTTP")
+Rel(admin, api, "Consumes", "REST/HTTP")
+Rel(api, jsonplaceholder, "Pulls users and posts", "REST/HTTP")
+Rel(webServer, spa, "Serves")
+Rel(user, spa, "Uses", "HTTP")
+Rel(anonymousUser, spa, "Uses", "HTTP")
+Rel(spa, api, "Consumes", "REST/HTTP")
+Rel(api, db, "Reads from and writes to", "JDBC")
+@enduml

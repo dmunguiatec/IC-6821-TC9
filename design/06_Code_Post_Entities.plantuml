@@ -1,0 +1,64 @@
+@startuml
+
+title [Code] Post Entities
+
+package org.springframework.jdbc.core {
+    interface RowMapper<T> {
+
+    }
+
+    package namedparam {
+        class NamedParameterJdbcDaoSupport {}
+    }
+}
+
+package edu.tec.ic6821.blog {
+    package framework {
+        abstract class BaseEntity {
+            # id: Long
+            # extId: String
+            # createdOn: LocalDateTime
+            # lastUpdatedOn: LocalDateTime
+        }
+    }
+
+    package model.posts {
+        class Post {
+            - integrationId: Long
+            - userIntegrationId: Long
+            - userId: Long
+            - title: String
+            - body: String
+        }
+
+        Post -up-|> BaseEntity
+
+        interface PostDao {
+            create(:Post): Post
+            create(:List<Post>): int
+            findById(:Long): Optional<Post>
+            findByExtId(:String): Optional<Post>
+            getAll(): List<Post>
+            findByUserId(:Long): List<Post>
+        }
+
+        class PostRowMapper {
+            + mapRow(:ResultSet, rowNum :int): Post
+        }
+
+        PostRowMapper ..|> RowMapper :<<bind>>\nPost:T
+
+        package hsqldb {
+            class HSQLDBPostDao {
+                + HSQLDBPostDao(:DataSource, :PostRowMapper)
+            }
+
+            HSQLDBPostDao --|> NamedParameterJdbcDaoSupport
+            HSQLDBPostDao ..|> PostDao
+            HSQLDBPostDao --> PostRowMapper
+            HSQLDBPostDao .left.> Post
+        }
+    }
+}
+
+@enduml

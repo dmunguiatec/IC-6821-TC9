@@ -1,0 +1,66 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+plugins {
+	id 'org.springframework.boot' version '2.5.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'checkstyle'
+    id 'jacoco'
+}
+
+group = 'edu.tec.ic6821'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    checkstyle project(':checks')
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.hsqldb:hsqldb'
+    implementation 'org.flywaydb:flyway-core'
+}
+
+test {
+	useJUnitPlatform()
+}
+
+tasks.withType(Test) {
+	testLogging {
+		// set options for log level LIFECYCLE
+		events TestLogEvent.FAILED,
+				TestLogEvent.PASSED,
+				TestLogEvent.SKIPPED
+		exceptionFormat TestExceptionFormat.FULL
+		showExceptions true
+		showCauses true
+		showStackTraces true
+
+		// set options for log level DEBUG and INFO
+		debug {
+			events TestLogEvent.STARTED,
+					TestLogEvent.FAILED,
+					TestLogEvent.PASSED,
+					TestLogEvent.SKIPPED,
+					TestLogEvent.STANDARD_ERROR,
+					TestLogEvent.STANDARD_OUT
+			exceptionFormat TestExceptionFormat.FULL
+		}
+		info.events = debug.events
+		info.exceptionFormat = debug.exceptionFormat
+
+		afterSuite { desc, result ->
+			if (!desc.parent) { // will match the outermost suite
+				def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)"
+				def startItem = '|  ', endItem = '  |'
+				def repeatLength = startItem.length() + output.length() + endItem.length()
+				println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+			}
+		}
+	}
+}

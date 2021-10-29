@@ -1,0 +1,69 @@
+@startuml
+
+title [Code] User Controller
+
+package edu.tec.ic6821.blog {
+    package users {
+
+        class UserController {
+            findPostsByUserExtId(:String): List<PostDTO>
+            findByUsername(:String): UserDTO
+        }
+
+        interface PostService {
+            findByUserExtId(:String): Optional<List<Post>>
+            findByExtId(:String): Optional<Post>
+        }
+
+        interface UserService {
+            findByUsername(:String): Optional<User>
+        }
+
+        UserController --> UserService
+        UserController --> PostService
+
+        class PostDTO {
+            - extId: String
+            - title: String
+            - body: String
+            + {static} from(:Post): PostDTO
+        }
+
+        class UserDTO {
+            - extId: String
+            - username: String
+            - name: String
+            - email: String
+            - zipCode: String
+            + {static} from(:User): UserDTO
+        }
+
+        UserController ..> PostDTO
+        UserController ..> UserDTO
+    }
+
+    package model.posts {
+        class Post {
+            - integrationId: Long
+            - userIntegrationId: Long
+            - userId: Long
+            - title: String
+            - body: String
+        }
+    }
+
+    package model.users {
+        class User {
+            - integrationId: Long
+            - username: String
+            - name: String
+            - email: String
+            - zipCode: String
+        }
+    }
+
+    PostService ..> Post
+    UserService ..> User
+}
+
+@enduml

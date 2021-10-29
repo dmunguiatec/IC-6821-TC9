@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="705px" preserveAspectRatio="none" style="width:732px;height:705px;background:#FFFFFF;" version="1.1" viewBox="0 0 732 705" width="732px" zoomAndPan="magnify"><defs><filter height="300%" id="fsvassjzk58y6" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="221" x="249.435" y="16.708">[Code] Blog Post Service</text><!--MD5=[58506b7fc782ff127a1a962d1768a9cc]
+cluster edu.tec.ic6821.blog--><polygon fill="#FFFFFF" filter="url(#fsvassjzk58y6)" points="16,26.9531,180,26.9531,187,49.25,707,49.25,707,698.9531,16,698.9531,16,26.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="187" y1="49.25" y2="49.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="20" y="41.9482">edu.tec.ic6821.blog</text><!--MD5=[68c2612fde5fb6affd293dc67938e0a2]
+cluster posts--><polygon fill="#FFFFFF" filter="url(#fsvassjzk58y6)" points="365,69.9531,414,69.9531,421,92.25,679,92.25,679,302.9531,365,302.9531,365,69.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="365" x2="421" y1="92.25" y2="92.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="43" x="369" y="84.9482">posts</text><!--MD5=[169dac24f8e3e1eefdb1b9a332ff451c]
+cluster model.posts--><polygon fill="#FFFFFF" filter="url(#fsvassjzk58y6)" points="40,326.9531,144,326.9531,151,349.25,342,349.25,342,674.9531,40,674.9531,40,326.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="151" y1="349.25" y2="349.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="44" y="341.9482">model.posts</text><!--MD5=[051bee5167da1a775f82b47e33bd77a3]
+cluster model.users--><polygon fill="#FFFFFF" filter="url(#fsvassjzk58y6)" points="366,333.4531,470,333.4531,477,355.75,670,355.75,670,509.4531,366,509.4531,366,333.4531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="366" x2="477" y1="355.75" y2="355.75"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="370" y="348.4482">model.users</text><!--MD5=[43046b2811d103cba6940a1623664b28]
+class PostService--><rect codeLine="7" fill="#FEFECE" filter="url(#fsvassjzk58y6)" height="73.6094" id="PostService" style="stroke:#A80036;stroke-width:1.5;" width="281" x="381.5" y="104.9531"/><ellipse cx="483.25" cy="120.9531" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M479.6719,116.7344 L479.6719,114.4531 L487.0625,114.4531 L487.0625,116.7344 L484.5938,116.7344 L484.5938,125.1875 L487.0625,125.1875 L487.0625,127.4531 L479.6719,127.4531 L479.6719,125.1875 L482.1406,125.1875 L482.1406,116.7344 L479.6719,116.7344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="69" x="503.75" y="125.1074">PostService</text><line style="stroke:#A80036;stroke-width:1.5;" x1="382.5" x2="661.5" y1="136.9531" y2="136.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="382.5" x2="661.5" y1="144.9531" y2="144.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="269" x="387.5" y="159.1636">findByUserExtId(:String): Optional&lt;List&lt;Post&gt;&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="387.5" y="171.9683">findByExtId(:String): Optional&lt;Post&gt;</text><!--MD5=[b86d35dc928899617b0c5302d85fe99a]
+class DefaultPostService--><rect codeLine="12" fill="#FEFECE" filter="url(#fsvassjzk58y6)" height="48" id="DefaultPostService" style="stroke:#A80036;stroke-width:1.5;" width="144" x="446" y="238.9531"/><ellipse cx="461" cy="254.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M463.4688,260.8281 Q462.8906,261.1406 462.25,261.2969 Q461.6094,261.4531 460.9063,261.4531 Q458.4063,261.4531 457.0781,259.7813 Q455.7656,258.1094 455.7656,254.9531 Q455.7656,251.7969 457.0781,250.125 Q458.4063,248.4531 460.9063,248.4531 Q461.6094,248.4531 462.25,248.6094 Q462.9063,248.7656 463.4688,249.0781 L463.4688,251.875 Q462.8438,251.3125 462.25,251.0469 Q461.6563,250.7656 461.0313,250.7656 Q459.6875,250.7656 459,251.8281 Q458.3125,252.8906 458.3125,254.9531 Q458.3125,257.0313 459,258.0938 Q459.6875,259.1406 461.0313,259.1406 Q461.6563,259.1406 462.25,258.875 Q462.8438,258.6094 463.4688,258.0313 L463.4688,260.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="112" x="475" y="259.1074">DefaultPostService</text><line style="stroke:#A80036;stroke-width:1.5;" x1="447" x2="589" y1="270.9531" y2="270.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="447" x2="589" y1="278.9531" y2="278.9531"/><!--MD5=[9bb0bdd047fba1a3c8d48282c35b4537]
+class Post--><rect codeLine="18" fill="#FEFECE" filter="url(#fsvassjzk58y6)" height="99.2188" id="Post" style="stroke:#A80036;stroke-width:1.5;" width="157" x="140.5" y="559.9531"/><ellipse cx="202.25" cy="575.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M204.7188,581.8281 Q204.1406,582.1406 203.5,582.2969 Q202.8594,582.4531 202.1563,582.4531 Q199.6563,582.4531 198.3281,580.7813 Q197.0156,579.1094 197.0156,575.9531 Q197.0156,572.7969 198.3281,571.125 Q199.6563,569.4531 202.1563,569.4531 Q202.8594,569.4531 203.5,569.6094 Q204.1563,569.7656 204.7188,570.0781 L204.7188,572.875 Q204.0938,572.3125 203.5,572.0469 Q202.9063,571.7656 202.2813,571.7656 Q200.9375,571.7656 200.25,572.8281 Q199.5625,573.8906 199.5625,575.9531 Q199.5625,578.0313 200.25,579.0938 Q200.9375,580.1406 202.2813,580.1406 Q202.9063,580.1406 203.5,579.875 Q204.0938,579.6094 204.7188,579.0313 L204.7188,581.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="25" x="222.75" y="580.1074">Post</text><line style="stroke:#A80036;stroke-width:1.5;" x1="141.5" x2="296.5" y1="591.9531" y2="591.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="148.5" y="599.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="160.5" y="606.1636">integrationId: Long</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="148.5" y="612.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="160.5" y="618.9683">userIntegrationId: Long</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="148.5" y="625.5625"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="62" x="160.5" y="631.7729">title: String</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="148.5" y="638.3672"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="160.5" y="644.5776">body: String</text><line style="stroke:#A80036;stroke-width:1.5;" x1="141.5" x2="296.5" y1="651.1719" y2="651.1719"/><!--MD5=[09bd85a82e4317e380eb2b66f557d9c5]
+class PostDao--><rect codeLine="25" fill="#FEFECE" filter="url(#fsvassjzk58y6)" height="137.6328" id="PostDao" style="stroke:#A80036;stroke-width:1.5;" width="270" x="56" y="361.9531"/><ellipse cx="162.75" cy="377.9531" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M159.1719,373.7344 L159.1719,371.4531 L166.5625,371.4531 L166.5625,373.7344 L164.0938,373.7344 L164.0938,382.1875 L166.5625,382.1875 L166.5625,384.4531 L159.1719,384.4531 L159.1719,382.1875 L161.6406,382.1875 L161.6406,373.7344 L159.1719,373.7344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="48" x="183.25" y="382.1074">PostDao</text><line style="stroke:#A80036;stroke-width:1.5;" x1="57" x2="325" y1="393.9531" y2="393.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="57" x2="325" y1="401.9531" y2="401.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="104" x="62" y="416.1636">create(:Post): Post</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="131" x="62" y="428.9683">create(:List&lt;Post&gt;): int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="62" y="441.7729">findById(:Long): Optional&lt;Post&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="62" y="454.5776">findByExtId(:String): Optional&lt;Post&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="62" y="467.3823">getAll(): List&lt;Post&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="180" x="62" y="480.187">findByUserId(:Long): List&lt;Post&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="258" x="62" y="492.9917">findByIntegrationIds(:List&lt;Long&gt;): List&lt;Post&gt;</text><!--MD5=[70d98a5b6eddfa62f6550e7c1d028c5c]
+class UserDao--><rect codeLine="37" fill="#FEFECE" filter="url(#fsvassjzk58y6)" height="124.8281" id="UserDao" style="stroke:#A80036;stroke-width:1.5;" width="272" x="382" y="368.4531"/><ellipse cx="488.75" cy="384.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M485.1719,380.2344 L485.1719,377.9531 L492.5625,377.9531 L492.5625,380.2344 L490.0938,380.2344 L490.0938,388.6875 L492.5625,388.6875 L492.5625,390.9531 L485.1719,390.9531 L485.1719,388.6875 L487.6406,388.6875 L487.6406,380.2344 L485.1719,380.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="50" x="509.25" y="388.6074">UserDao</text><line style="stroke:#A80036;stroke-width:1.5;" x1="383" x2="653" y1="400.4531" y2="400.4531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="383" x2="653" y1="408.4531" y2="408.4531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="388" y="422.6636">create(:User): User</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="388" y="435.4683">create(:List&lt;User&gt;): int</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184" x="388" y="448.2729">findById(:Long): Optional&lt;User&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="208" x="388" y="461.0776">findByExtId(:String): Optional&lt;User&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="260" x="388" y="473.8823">findByIntegrationIds(:List&lt;Long&gt;): List&lt;User&gt;</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="238" x="388" y="486.687">findByUsername(:String): Optional&lt;User&gt;</text><!--MD5=[8fac5bbc7181a64f3d41ff4eaca9d3ee]
+link PostService to Post--><path codeLine="47" d="M566.78,179.0231 C602.82,211.2731 650.55,262.1031 670,318.9531 C698.56,402.4231 725.87,449.1831 670,517.4531 C624.51,573.0331 420.39,595.4331 302.95,603.8431 " fill="none" id="PostService-to-Post" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="297.77,604.2031,307.0321,607.5517,302.7573,603.8469,306.4621,599.5721,297.77,604.2031" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3a68e3ac1ce7d709d1419c34a35ac2f1]
+reverse link PostService to DefaultPostService--><path codeLine="48" d="M520.12,199.0231 C519.64,213.0731 519.16,227.3831 518.78,238.8031 " fill="none" id="PostService-backto-DefaultPostService" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="513.12,198.7331,520.79,178.9831,527.11,199.2031,513.12,198.7331" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4526f35444818cfd22a749573ed085b4]
+link DefaultPostService to UserDao--><path codeLine="49" d="M518,287.0331 C518,306.7431 518,336.1031 518,363.0931 " fill="none" id="DefaultPostService-to-UserDao" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="518,368.1031,522,359.1031,518,363.1031,514,359.1031,518,368.1031" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bbab72447aeedbad957157c06c0cc3d6]
+link DefaultPostService to PostDao--><path codeLine="50" d="M445.91,286.4231 C420.18,295.3831 391.32,306.5231 366,318.9531 C342.13,330.6631 317.46,344.8631 294.44,359.1431 " fill="none" id="DefaultPostService-to-PostDao" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="290.16,361.8131,299.9141,360.4499,294.404,359.1696,295.6843,353.6595,290.16,361.8131" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[516480689246aa2220565b4146035439]
+link PostDao to Post--><path codeLine="51" d="M201.83,500.1931 C204.68,518.2131 207.73,537.4131 210.45,554.5631 " fill="none" id="PostDao-to-Post" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="211.28,559.8131,213.8175,550.2968,210.4951,554.8751,205.9167,551.5527,211.28,559.8131" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fc6ed6f9f2514f2c95a5ca4ba6c4fbcc]
+@startuml
+
+title [Code] Blog Post Service
+
+package edu.tec.ic6821.blog {
+    package posts {
+
+        interface PostService {
+            findByUserExtId(:String): Optional<List<Post>>
+            findByExtId(:String): Optional<Post>
+        }
+
+        class DefaultPostService {
+        }
+
+    }
+
+    package model.posts {
+        class Post {
+            - integrationId: Long
+            - userIntegrationId: Long
+            - title: String
+            - body: String
+        }
+
+        interface PostDao {
+            create(:Post): Post
+            create(:List<Post>): int
+            findById(:Long): Optional<Post>
+            findByExtId(:String): Optional<Post>
+            getAll(): List<Post>
+            findByUserId(:Long): List<Post>
+            findByIntegrationIds(:List<Long>): List<Post>
+        }
+    }
+
+    package model.users {
+        interface UserDao {
+            create(:User): User
+            create(:List<User>): int
+            findById(:Long): Optional<User>
+            findByExtId(:String): Optional<User>
+            findByIntegrationIds(:List<Long>): List<User>
+            findByUsername(:String): Optional<User>
+        }
+    }
+
+    PostService ..> Post
+    PostService <|.. DefaultPostService
+    DefaultPostService - -> UserDao
+    DefaultPostService - -> PostDao
+    PostDao ..> Post
+}
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 07:26:11 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

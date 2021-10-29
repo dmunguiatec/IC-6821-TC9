@@ -1,0 +1,17 @@
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+
+title [System Context] Blog App
+
+Person(user, "Blogger", "A content creator")
+Person(admin, "Admin", "A system administrator")
+Person_Ext(anonymousUser, "Anonymous User", "A consumer of content")
+System(blogapp, "Blog App", "Allows content creators to publish and manage posts, and consumers to access content.")
+System_Ext(jsonplaceholder, "Json Placeholder", "Legacy blog app")
+
+Rel(user, blogapp, "Uses")
+Rel(anonymousUser, blogapp, "Uses")
+Rel(admin, blogapp, "Manages")
+Rel(blogapp, jsonplaceholder, "Pulls users and posts", "REST/HTTP")
+@enduml

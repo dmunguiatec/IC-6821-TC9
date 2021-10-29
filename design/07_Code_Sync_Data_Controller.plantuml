@@ -1,0 +1,33 @@
+@startuml
+
+title [Code] Sync Data Controller
+
+package edu.tec.ic6821.blog {
+    package sync {
+
+        class SyncDataController {
+            sync(): SyncDataResultDTO
+        }
+
+        interface SyncDataService {
+            sync(): SyncDataResult
+        }
+
+        SyncDataController --> SyncDataService
+
+        class SyncDataResultDTO {
+            - createdUsersCount
+            - createdPostsCount
+        }
+
+        class SyncDataResult {
+            - createdUsersCount
+            - createdPostsCount
+        }
+
+        SyncDataController ..> SyncDataResultDTO
+        SyncDataService ..> SyncDataResult
+    }
+}
+
+@enduml

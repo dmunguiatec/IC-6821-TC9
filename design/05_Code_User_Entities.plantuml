@@ -1,0 +1,63 @@
+@startuml
+
+title [Code] User Entities
+
+package org.springframework.jdbc.core {
+    interface RowMapper<T> {
+
+    }
+
+    package namedparam {
+        class NamedParameterJdbcDaoSupport {}
+    }
+}
+
+package edu.tec.ic6821.blog {
+    package framework {
+        abstract class BaseEntity {
+            # id: Long
+            # extId: String
+            # createdOn: LocalDateTime
+            # lastUpdatedOn: LocalDateTime
+        }
+    }
+
+    package model.users {
+        class User {
+            - integrationId: Long
+            - username: String
+            - name: String
+            - email: String
+            - zipCode: String
+        }
+
+        User -up-|> BaseEntity
+
+        interface UserDao {
+            create(User user): User
+            create(List<User> users): int
+            findById(Long id): Optional<User>
+            findByExtId(String extId): Optional<User>
+            findByIntegrationIds(List<Long> userIntegrationIds): List<User>
+        }
+
+        class UserRowMapper {
+            + mapRow(:ResultSet, rowNum :int): User
+        }
+
+        UserRowMapper ..|> RowMapper :<<bind>>\nUser:T
+
+        package hsqldb {
+            class HSQLDBUserDao {
+                + HSQLDBUserDao(:DataSource, :UserRowMapper)
+            }
+
+            HSQLDBUserDao --|> NamedParameterJdbcDaoSupport
+            HSQLDBUserDao ..|> UserDao
+            HSQLDBUserDao --> UserRowMapper
+            HSQLDBUserDao .left.> User
+        }
+    }
+}
+
+@enduml

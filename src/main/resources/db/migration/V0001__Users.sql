@@ -1,0 +1,11 @@
+CREATE TABLE users (
+    id INT IDENTITY PRIMARY KEY,
+    integration_id INT DEFAULT NULL,
+    username VARCHAR(256) UNIQUE NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    email VARCHAR(256) NOT NULL,
+    zip_code VARCHAR(16) DEFAULT NULL,
+    ext_id VARCHAR(36) UNIQUE NOT NULL,
+    created_on TIMESTAMP DEFAULT NOW,
+    last_updated_on TIMESTAMP DEFAULT NOW
+);

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="480px" preserveAspectRatio="none" style="width:442px;height:480px;background:#FFFFFF;" version="1.1" viewBox="0 0 442 480" width="442px" zoomAndPan="magnify"><defs><filter height="300%" id="fximln56fgijs" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="252" x="88.5" y="16.708">[Code] Sync Data Controller</text><!--MD5=[58506b7fc782ff127a1a962d1768a9cc]
+cluster edu.tec.ic6821.blog--><polygon fill="#FFFFFF" filter="url(#fximln56fgijs)" points="16,26.9531,180,26.9531,187,49.25,425,49.25,425,473.9531,16,473.9531,16,26.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="187" y1="49.25" y2="49.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="158" x="20" y="41.9482">edu.tec.ic6821.blog</text><!--MD5=[f9f5e47277aa1cf362235c24d633d021]
+cluster sync--><polygon fill="#FFFFFF" filter="url(#fximln56fgijs)" points="40,69.9531,81,69.9531,88,92.25,401,92.25,401,449.9531,40,449.9531,40,69.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="40" x2="88" y1="92.25" y2="92.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="35" x="44" y="84.9482">sync</text><!--MD5=[98fee588d1b3c2c1e1375c675e41f963]
+class SyncDataController--><rect codeLine="7" fill="#FEFECE" filter="url(#fximln56fgijs)" height="60.8047" id="SyncDataController" style="stroke:#A80036;stroke-width:1.5;" width="166" x="137" y="104.9531"/><ellipse cx="160.1" cy="120.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M162.5688,126.8281 Q161.9906,127.1406 161.35,127.2969 Q160.7094,127.4531 160.0063,127.4531 Q157.5063,127.4531 156.1781,125.7813 Q154.8656,124.1094 154.8656,120.9531 Q154.8656,117.7969 156.1781,116.125 Q157.5063,114.4531 160.0063,114.4531 Q160.7094,114.4531 161.35,114.6094 Q162.0063,114.7656 162.5688,115.0781 L162.5688,117.875 Q161.9438,117.3125 161.35,117.0469 Q160.7563,116.7656 160.1313,116.7656 Q158.7875,116.7656 158.1,117.8281 Q157.4125,118.8906 157.4125,120.9531 Q157.4125,123.0313 158.1,124.0938 Q158.7875,125.1406 160.1313,125.1406 Q160.7563,125.1406 161.35,124.875 Q161.9438,124.6094 162.5688,124.0313 L162.5688,126.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="116" x="175.9" y="125.1074">SyncDataController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="138" x2="302" y1="136.9531" y2="136.9531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="138" x2="302" y1="144.9531" y2="144.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="143" y="159.1636">sync(): SyncDataResultDTO</text><!--MD5=[77c3fb0b45922baded395e17a7324656]
+class SyncDataService--><rect codeLine="11" fill="#FEFECE" filter="url(#fximln56fgijs)" height="60.8047" id="SyncDataService" style="stroke:#A80036;stroke-width:1.5;" width="142" x="56" y="232.4531"/><ellipse cx="74.6" cy="248.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M71.0219,244.2344 L71.0219,241.9531 L78.4125,241.9531 L78.4125,244.2344 L75.9438,244.2344 L75.9438,252.6875 L78.4125,252.6875 L78.4125,254.9531 L71.0219,254.9531 L71.0219,252.6875 L73.4906,252.6875 L73.4906,244.2344 L71.0219,244.2344 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="102" x="89.4" y="252.6074">SyncDataService</text><line style="stroke:#A80036;stroke-width:1.5;" x1="57" x2="197" y1="264.4531" y2="264.4531"/><line style="stroke:#A80036;stroke-width:1.5;" x1="57" x2="197" y1="272.4531" y2="272.4531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="62" y="286.6636">sync(): SyncDataResult</text><!--MD5=[ffb764009e167323753f3e8f7e6214ac]
+class SyncDataResultDTO--><rect codeLine="17" fill="#FEFECE" filter="url(#fximln56fgijs)" height="73.6094" id="SyncDataResultDTO" style="stroke:#A80036;stroke-width:1.5;" width="152" x="233" y="225.9531"/><ellipse cx="248" cy="241.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M250.4688,247.8281 Q249.8906,248.1406 249.25,248.2969 Q248.6094,248.4531 247.9063,248.4531 Q245.4063,248.4531 244.0781,246.7813 Q242.7656,245.1094 242.7656,241.9531 Q242.7656,238.7969 244.0781,237.125 Q245.4063,235.4531 247.9063,235.4531 Q248.6094,235.4531 249.25,235.6094 Q249.9063,235.7656 250.4688,236.0781 L250.4688,238.875 Q249.8438,238.3125 249.25,238.0469 Q248.6563,237.7656 248.0313,237.7656 Q246.6875,237.7656 246,238.8281 Q245.3125,239.8906 245.3125,241.9531 Q245.3125,244.0313 246,245.0938 Q246.6875,246.1406 248.0313,246.1406 Q248.6563,246.1406 249.25,245.875 Q249.8438,245.6094 250.4688,245.0313 L250.4688,247.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="120" x="262" y="246.1074">SyncDataResultDTO</text><line style="stroke:#A80036;stroke-width:1.5;" x1="234" x2="384" y1="257.9531" y2="257.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="241" y="265.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="253" y="272.1636">createdUsersCount</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="241" y="278.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="253" y="284.9683">createdPostsCount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="234" x2="384" y1="291.5625" y2="291.5625"/><!--MD5=[8ac8f80239d807d468b3f312a500c322]
+class SyncDataResult--><rect codeLine="22" fill="#FEFECE" filter="url(#fximln56fgijs)" height="73.6094" id="SyncDataResult" style="stroke:#A80036;stroke-width:1.5;" width="134" x="60" y="359.9531"/><ellipse cx="78.15" cy="375.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M80.6188,381.8281 Q80.0406,382.1406 79.4,382.2969 Q78.7594,382.4531 78.0563,382.4531 Q75.5563,382.4531 74.2281,380.7813 Q72.9156,379.1094 72.9156,375.9531 Q72.9156,372.7969 74.2281,371.125 Q75.5563,369.4531 78.0563,369.4531 Q78.7594,369.4531 79.4,369.6094 Q80.0563,369.7656 80.6188,370.0781 L80.6188,372.875 Q79.9938,372.3125 79.4,372.0469 Q78.8063,371.7656 78.1813,371.7656 Q76.8375,371.7656 76.15,372.8281 Q75.4625,373.8906 75.4625,375.9531 Q75.4625,378.0313 76.15,379.0938 Q76.8375,380.1406 78.1813,380.1406 Q78.8063,380.1406 79.4,379.875 Q79.9938,379.6094 80.6188,379.0313 L80.6188,381.8281 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="95" x="92.85" y="380.1074">SyncDataResult</text><line style="stroke:#A80036;stroke-width:1.5;" x1="61" x2="193" y1="391.9531" y2="391.9531"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="68" y="399.9531"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="108" x="80" y="406.1636">createdUsersCount</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="68" y="412.7578"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="80" y="418.9683">createdPostsCount</text><line style="stroke:#A80036;stroke-width:1.5;" x1="61" x2="193" y1="425.5625" y2="425.5625"/><!--MD5=[b50123580715dcac7ddb7d1ec181d9c0]
+link SyncDataController to SyncDataService--><path codeLine="15" d="M197.96,166.1931 C184.18,184.7931 166.39,208.8031 152.07,228.1231 " fill="none" id="SyncDataController-to-SyncDataService" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="148.88,232.4231,157.4607,227.5888,151.864,228.4112,151.0416,222.8144,148.88,232.4231" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b68602d210d6e9839cbc25807c29840e]
+link SyncDataController to SyncDataResultDTO--><path codeLine="27" d="M241.09,166.1931 C252.75,182.6331 267.4,203.2931 280.11,221.2131 " fill="none" id="SyncDataController-to-SyncDataResultDTO" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="283.3,225.7131,281.3366,216.062,280.3992,221.6406,274.8206,220.7032,283.3,225.7131" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[dcfb0cf20aa8fd92d255bade3552fd1f]
+link SyncDataService to SyncDataResult--><path codeLine="28" d="M127,293.5731 C127,311.5831 127,334.8331 127,354.6231 " fill="none" id="SyncDataService-to-SyncDataResult" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="127,359.8431,131,350.8431,127,354.8431,123,350.8431,127,359.8431" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1064942e85b595d073c22c4252aa9167]
+@startuml
+
+title [Code] Sync Data Controller
+
+package edu.tec.ic6821.blog {
+    package sync {
+
+        class SyncDataController {
+            sync(): SyncDataResultDTO
+        }
+
+        interface SyncDataService {
+            sync(): SyncDataResult
+        }
+
+        SyncDataController - -> SyncDataService
+
+        class SyncDataResultDTO {
+            - createdUsersCount
+            - createdPostsCount
+        }
+
+        class SyncDataResult {
+            - createdUsersCount
+            - createdPostsCount
+        }
+
+        SyncDataController ..> SyncDataResultDTO
+        SyncDataService ..> SyncDataResult
+    }
+}
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 07:26:11 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

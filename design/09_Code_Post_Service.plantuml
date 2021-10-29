@@ -1,0 +1,55 @@
+@startuml
+
+title [Code] Blog Post Service
+
+package edu.tec.ic6821.blog {
+    package posts {
+
+        interface PostService {
+            findByUserExtId(:String): Optional<List<Post>>
+            findByExtId(:String): Optional<Post>
+        }
+
+        class DefaultPostService {
+        }
+
+    }
+
+    package model.posts {
+        class Post {
+            - integrationId: Long
+            - userIntegrationId: Long
+            - title: String
+            - body: String
+        }
+
+        interface PostDao {
+            create(:Post): Post
+            create(:List<Post>): int
+            findById(:Long): Optional<Post>
+            findByExtId(:String): Optional<Post>
+            getAll(): List<Post>
+            findByUserId(:Long): List<Post>
+            findByIntegrationIds(:List<Long>): List<Post>
+        }
+    }
+
+    package model.users {
+        interface UserDao {
+            create(:User): User
+            create(:List<User>): int
+            findById(:Long): Optional<User>
+            findByExtId(:String): Optional<User>
+            findByIntegrationIds(:List<Long>): List<User>
+            findByUsername(:String): Optional<User>
+        }
+    }
+
+    PostService ..> Post
+    PostService <|.. DefaultPostService
+    DefaultPostService --> UserDao
+    DefaultPostService --> PostDao
+    PostDao ..> Post
+}
+
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+
+title [Code] User Service
+
+package edu.tec.ic6821.blog {
+    package users {
+
+        interface UserService {
+            findByUsername(:String): Optional<User>
+        }
+
+        class DefaultUserService {}
+
+    }
+
+    package model.users {
+        class User {
+            - integrationId: Long
+            - username: String
+            - name: String
+            - email: String
+            - zipCode: String
+        }
+
+        interface UserDao {
+            create(User user): User
+            create(List<User> users): int
+            findById(Long id): Optional<User>
+            findByExtId(String extId): Optional<User>
+            findByIntegrationIds(List<Long> userIntegrationIds): List<User>
+        }
+    }
+
+    UserService <|.. DefaultUserService
+    DefaultUserService --> UserDao
+    UserDao ..> User
+    UserService ..> User
+
+}
+
+@enduml

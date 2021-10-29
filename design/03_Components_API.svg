@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1139px" preserveAspectRatio="none" style="width:917px;height:1139px;background:#FFFFFF;" version="1.1" viewBox="0 0 917 1139" width="917px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="161" x="371.75" y="16.708">[Components] API</text><!--MD5=[7442f3b126ee602ae02566c1a49e158a]
+cluster api--><rect fill="#FFFFFF" height="665" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="720" x="7" y="269.9531"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="30" x="352" y="296.8047">API</text><text fill="#444444" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="333" y="311.7168">[Container]</text><!--MD5=[773150db06b3d989deb6753d3131a3ca]
+entity syncService--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="198" x="513" y="551.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="570.5" y="573.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="163" x="530.5" y="590.7734">Sync Data Service</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="570" y="605.6855">[Spring Bean]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="614" y="621.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="167" x="528.5" y="637.8076">Synchronizes users and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="523" y="654.1045">posts data from external</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="587" y="670.4014">system</text><!--MD5=[cd374c1134b0d1beb6c95380cb67707b]
+entity postController--><rect fill="#85BBF0" height="115.4531" style="stroke:#78A8D8;stroke-width:1.5;" width="206" x="264" y="339.4531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="325.5" y="360.5918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="276" y="378.2734">Blog Post Controller</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="142" x="296" y="393.1855">[Spring MVC Controller]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="369" y="409.0107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="278" y="425.3076">Provides API endpoints to</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="278" y="441.6045">create and retrieve posts</text><!--MD5=[ec6170facf0367da1d62aa433579965a]
+entity userController--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="206" x="23" y="330.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="84.5" y="352.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="138" x="57" y="369.7734">User Controller</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="142" x="55" y="384.6855">[Spring MVC Controller]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="128" y="400.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="37" y="416.8076">Provides API endpoints to</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="39" y="433.1045">retrieve users and posts</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="111" x="70.5" y="449.4014">related to users</text><!--MD5=[6192ac144fd9a83fdc012980a054b409]
+entity syncController--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="206" x="505" y="330.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="566.5" y="352.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="138" x="539" y="369.7734">Sync Controller</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="142" x="537" y="384.6855">[Spring MVC Controller]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="610" y="400.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="178" x="519" y="416.8076">Provides API endpoints to</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="515" y="433.1045">sync posts and users data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="532.5" y="449.4014">from external system</text><!--MD5=[79c2b321a0ebffd2c9e89e05ba433d9a]
+entity postService--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="219" x="257.5" y="551.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="325.5" y="573.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="158" x="288" y="590.7734">Blog Post Service</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="325" y="605.6855">[Spring Bean]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="369" y="621.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="287.5" y="637.8076">Implements functional</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="267.5" y="654.1045">requirements to create and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97" x="318.5" y="670.4014">retrieve posts</text><!--MD5=[35e4e5ff99f313a282eea6e6613e2112]
+entity userService--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="198" x="23" y="551.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="80.5" y="573.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="114" x="65" y="590.7734">User Service</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="80" y="605.6855">[Spring Bean]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="124" y="621.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="42.5" y="637.8076">Implements functional</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="33" y="654.1045">requirements to retrieve</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="103" y="670.4014">users</text><!--MD5=[18dced81452983d6ca1d8aabd7674e03]
+entity postRepository--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="209" x="378.5" y="786.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="441.5" y="808.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="161" x="402.5" y="825.7734">Blog Post Entities</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="441.5" y="840.6855">[Spring JDBC]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="485" y="856.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="392.5" y="872.8076">Manages persistence and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="403.5" y="889.1045">retrieval of posts data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="457" y="905.4014">models</text><!--MD5=[7652cd6636fe2e9b705b0f5ab8d0f1db]
+entity userRepository--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="209" x="134.5" y="786.9531"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="197.5" y="808.0918">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="117" x="180.5" y="825.7734">User Entities</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="197.5" y="840.6855">[Spring JDBC]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="241" y="856.5107"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="148.5" y="872.8076">Manages persistence and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="159" y="889.1045">retrieval of users data</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="213" y="905.4014">models</text><!--MD5=[79a439086b036a57b90a01d7b2f8bbd1]
+entity admin--><rect fill="#08427B" height="133.1875" style="stroke:#073B6F;stroke-width:1.5;" width="188" x="514" y="44.9531"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="55" x="580.5" y="66.0918">«person»</text><image height="48" width="48" x="584" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="68.9219"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="580" y="131.7734">Admin</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="610" y="148.542"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="528" y="164.8389">A system administrator</text><!--MD5=[33573e971ff506c0f246109ca3fd77bd]
+entity spa--><rect fill="#438DD5" height="166.6719" style="stroke:#3C7FC0;stroke-width:1.5;" width="193" x="270.5" y="27.9531"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="331.5" y="49.0918">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="106" x="311" y="66.7734">Single Page</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="99" x="317.5" y="85.3984">Application</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="64" x="335" y="100.3105">[JS, React]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="369" y="116.1357"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="297.5" y="132.4326">Blog user interface.</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="280.5" y="148.7295">Delivers content. Allows</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="140" x="295" y="165.0264">creators to manage</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="58" x="338" y="181.3232">content.</text><!--MD5=[7468467f3b6b392f1d176d828c753b77]
+entity db--><path d="M263,1033.9531 C263,1023.9531 372,1023.9531 372,1023.9531 C372,1023.9531 481,1023.9531 481,1033.9531 L481,1122.1094 C481,1132.1094 372,1132.1094 372,1132.1094 C372,1132.1094 263,1132.1094 263,1122.1094 L263,1033.9531 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:1.5;"/><path d="M263,1033.9531 C263,1043.9531 372,1043.9531 372,1043.9531 C372,1043.9531 481,1043.9531 481,1033.9531 " fill="none" style="stroke:#3C7FC0;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="71" x="336.5" y="1059.0918">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="281" y="1076.7734">Relational Database</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="198" x="273" y="1091.6855">[In-Memory HyperSQL DataBase]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="374" y="1107.5107"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="316" y="1123.8076">Stores blog data</text><!--MD5=[73bfd96d20e694f4eb4cb9cc8867fc19]
+entity jsonplaceholder--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="169" x="742.5" y="810.4531"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="112" x="771" y="831.5918">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="149" x="752.5" y="849.2734">Json Placeholder</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="829" y="866.042"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="770.5" y="882.3389">Legacy blog app</text><!--MD5=[417685c3766e5d1c0ed902677b52956d]
+link postController to postService--><path d="M367,454.6331 C367,481.7431 367,514.5331 367,543.5231 " fill="none" id="postController-to-postService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="367,551.5831,370,543.5831,364,543.5831,367,551.5831" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="395" y="505.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="368" y="519.0605">[Java method]</text><!--MD5=[f44524524f4b815f21a594d8e531999b]
+link userController to userService--><path d="M115.91,462.9931 C114.7,473.0031 113.66,483.2331 113,492.9531 C111.88,509.3331 112.23,526.9231 113.26,543.5631 " fill="none" id="userController-to-userService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="113.82,551.6431,116.2559,543.4537,110.2705,543.8713,113.82,551.6431" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="141" y="505.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="114" y="519.0605">[Java method]</text><!--MD5=[d46c15bbbcb99ab8ff16bc35163b542e]
+link userController to postService--><path d="M197.66,463.0631 C226.41,489.2031 259.64,519.3931 289,546.0731 " fill="none" id="userController-to-postService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="295.2,551.7131,291.3049,544.1086,287.2651,548.5449,295.2,551.7131" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="289" y="505.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="262" y="519.0605">[Java method]</text><!--MD5=[cc923c4f7cadbf9f77ba6bfe208b3248]
+link postService to postRepository--><path d="M353.6,684.0731 C351.69,708.0331 353.3,734.7131 364,756.9531 C368.08,765.4231 373.31,773.3731 379.31,780.7731 " fill="none" id="postService-to-postRepository" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="384.52,786.8731,381.5946,778.8456,377.0375,782.7485,384.52,786.8731" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="392" y="733.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="365" y="747.0605">[Java method]</text><!--MD5=[02c7c93afe27c4598ebed84f4848954b]
+link postService to userRepository--><path d="M279.4,684.1931 C271.14,693.3831 263.73,703.3531 258,713.9531 C247.4,733.5631 241.97,756.9431 239.37,778.8431 " fill="none" id="postService-to-userRepository" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="238.53,786.8331,242.3424,779.1869,236.3747,778.5654,238.53,786.8331" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="286" y="733.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="259" y="747.0605">[Java method]</text><!--MD5=[0b13595172d7c20732e05ec1b3f63a5e]
+link userService to userRepository--><path d="M100.9,684.2331 C96.79,708.2031 96.73,734.8531 108,756.9531 C113.34,767.4231 120.44,777.0131 128.57,785.7231 " fill="none" id="userService-to-userRepository" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="134.36,791.6131,130.8933,783.804,126.6133,788.0091,134.36,791.6131" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="136" y="733.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="109" y="747.0605">[Java method]</text><!--MD5=[484aa48f6d35746aa4a135830dc35a91]
+link syncController to syncService--><path d="M609.19,463.0631 C609.65,488.3231 610.18,517.3731 610.66,543.3831 " fill="none" id="syncController-to-syncService" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="610.81,551.7131,613.6667,543.6608,607.6676,543.768,610.81,551.7131" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="638" y="505.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="611" y="519.0605">[Java method]</text><!--MD5=[f81b767718d34e28fe586c7715ce1173]
+link syncService to postRepository--><path d="M607.13,683.9931 C603.24,708.0631 596.31,734.8431 584,756.9531 C579.43,765.1731 573.89,773.0931 567.81,780.6131 " fill="none" id="syncService-to-postRepository" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="562.57,786.8331,570.0154,782.642,565.4237,778.7798,562.57,786.8331" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="628" y="733.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="601" y="747.0605">[Java method]</text><!--MD5=[4016c01bdce29e489e47abca626775b5]
+link syncService to userRepository--><path d="M520.78,684.1131 C509.32,693.6531 498.09,703.7231 488,713.9531 C471.27,730.9131 475.41,743.1431 456,756.9531 C419.92,782.6231 401.82,769.8031 361,786.9531 C357.67,788.3531 354.32,789.8031 350.95,791.3131 " fill="none" id="syncService-to-userRepository" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="343.55,794.6831,352.0742,794.1013,349.5897,788.6398,343.55,794.6831" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="32" x="516" y="733.0918">Calls</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="489" y="747.0605">[Java method]</text><!--MD5=[625842aee299c592dfb4da3e049c9d5e]
+link postRepository to db--><path d="M450.6,919.0531 C435.32,949.7531 417.2,986.1531 402.21,1016.2731 " fill="none" id="postRepository-to-db" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="398.47,1023.7831,404.7124,1017.9494,399.3373,1015.2833,398.47,1023.7831" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="107" x="436" y="963.0918">Reads from and</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="461.5" y="977.0605">writes to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="472" y="991.0293">[JDBC]</text><!--MD5=[18cb9a4ac4191a7ef881a0a1305652c7]
+link userRepository to db--><path d="M258.78,919.1431 C267.67,943.5931 279.47,971.0031 294,993.9531 C299.04,1001.9131 304.91,1009.7931 311.12,1017.3331 " fill="none" id="userRepository-to-db" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="316.41,1023.5831,313.5453,1015.5337,308.9589,1019.4021,316.41,1023.5831" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="107" x="295" y="963.0918">Reads from and</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="320.5" y="977.0605">writes to</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="331" y="991.0293">[JDBC]</text><!--MD5=[fdda2cf28917a74d5f9fd5bf890b8efc]
+link admin to syncController--><path d="M608,178.2031 C608,221.3231 608,277.7531 608,322.3731 " fill="none" id="admin-to-syncController" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="608,330.5531,611,322.5531,605,322.5531,608,330.5531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="57" x="618" y="237.0918">Triggers</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="75" x="609" y="251.0605">[REST/HTTP]</text><!--MD5=[a26efda44e0967b2898429b11ac84a51]
+link spa to postController--><path d="M367,195.2131 C367,238.4831 367,290.6831 367,331.0031 " fill="none" id="spa-to-postController" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="367,339.1631,370,331.1631,364,331.1631,367,339.1631" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="370.5" y="237.0918">Consumes</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="75" x="368" y="251.0605">[REST/HTTP]</text><!--MD5=[cdb3416de2de53222c186dbfc035a64f]
+link syncService to jsonplaceholder--><path d="M672.18,684.1631 C707.41,722.3431 751.11,769.7031 783.09,804.3631 " fill="none" id="syncService-to-jsonplaceholder" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="788.52,810.2531,785.3014,802.3386,780.8909,806.4065,788.52,810.2531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="145" x="739" y="726.0918">Pulls users and posts</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="31" x="798" y="740.0605">data</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="75" x="776" y="754.0293">[REST/HTTP]</text><!--MD5=[83c953772779c7585aa50e6397ad8006]
+@startuml C4_Elements
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+title [Components] API
+
+Person(admin, "Admin", "A system administrator")
+
+Container(spa, "Single Page Application", "JS, React", "Blog user interface. Delivers content. Allows creators to manage content.")
+
+ContainerDb(db, "Relational Database", "In-Memory HyperSQL DataBase", "Stores blog data")
+Container_Boundary(api, "API") {
+    Component(syncService, "Sync Data Service", "Spring Bean", "Synchronizes users and posts data from external system")
+    Component(postController, "Blog Post Controller", "Spring MVC Controller", "Provides API endpoints to create and retrieve posts")
+    Component(userController, "User Controller", "Spring MVC Controller", "Provides API endpoints to retrieve users and posts related to users")
+    Component(syncController, "Sync Controller", "Spring MVC Controller", "Provides API endpoints to sync posts and users data from external system")
+    Component(postService, "Blog Post Service", "Spring Bean", "Implements functional requirements to create and retrieve posts")
+    Component(userService, "User Service", "Spring Bean", "Implements functional requirements to retrieve users")
+    Component(postRepository, "Blog Post Entities", "Spring JDBC", "Manages persistence and retrieval of posts data models")
+    Component(userRepository, "User Entities", "Spring JDBC", "Manages persistence and retrieval of users data models")
+
+    Rel(postController, postService, "Calls", "Java method")
+    Rel(userController, userService, "Calls", "Java method")
+    Rel(userController, postService, "Calls", "Java method")
+    Rel(postService, postRepository, "Calls", "Java method")
+    Rel(postService, userRepository, "Calls", "Java method")
+    Rel(userService, userRepository, "Calls", "Java method")
+    Rel(syncController, syncService, "Calls", "Java method")
+    Rel(syncService, postRepository, "Calls", "Java method")
+    Rel(syncService, userRepository, "Calls", "Java method")
+    Rel(postRepository, db, "Reads from and writes to", "JDBC")
+    Rel(userRepository, db, "Reads from and writes to", "JDBC")
+}
+
+System_Ext(jsonplaceholder, "Json Placeholder", "Legacy blog app")
+
+Rel(admin, syncController, "Triggers", "REST/HTTP")
+Rel(spa, postController, "Consumes", "REST/HTTP")
+Rel(syncService, jsonplaceholder, "Pulls users and posts data", "REST/HTTP")
+@enduml
+
+@startuml C4_Elements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+title [Components] API
+
+rectangle "<$person>\n==Admin\n\n A system administrator" <<person>> as admin 
+
+rectangle "==Single Page Application\n//<size:12>[JS, React]</size>//\n\n Blog user interface. Delivers content. Allows creators to manage content." <<container>> as spa 
+
+database "==Relational Database\n//<size:12>[In-Memory HyperSQL DataBase]</size>//\n\n Stores blog data" <<container>> as db 
+rectangle "==API\n<size:12>[Container]</size>" <<boundary>> as api  {
+    rectangle "==Sync Data Service\n//<size:12>[Spring Bean]</size>//\n\n Synchronizes users and posts data from external system" <<component>> as syncService 
+    rectangle "==Blog Post Controller\n//<size:12>[Spring MVC Controller]</size>//\n\n Provides API endpoints to create and retrieve posts" <<component>> as postController 
+    rectangle "==User Controller\n//<size:12>[Spring MVC Controller]</size>//\n\n Provides API endpoints to retrieve users and posts related to users" <<component>> as userController 
+    rectangle "==Sync Controller\n//<size:12>[Spring MVC Controller]</size>//\n\n Provides API endpoints to sync posts and users data from external system" <<component>> as syncController 
+    rectangle "==Blog Post Service\n//<size:12>[Spring Bean]</size>//\n\n Implements functional requirements to create and retrieve posts" <<component>> as postService 
+    rectangle "==User Service\n//<size:12>[Spring Bean]</size>//\n\n Implements functional requirements to retrieve users" <<component>> as userService 
+    rectangle "==Blog Post Entities\n//<size:12>[Spring JDBC]</size>//\n\n Manages persistence and retrieval of posts data models" <<component>> as postRepository 
+    rectangle "==User Entities\n//<size:12>[Spring JDBC]</size>//\n\n Manages persistence and retrieval of users data models" <<component>> as userRepository 
+
+    postController - ->> postService : **Calls**\n//<size:12>[Java method]</size>//
+    userController - ->> userService : **Calls**\n//<size:12>[Java method]</size>//
+    userController - ->> postService : **Calls**\n//<size:12>[Java method]</size>//
+    postService - ->> postRepository : **Calls**\n//<size:12>[Java method]</size>//
+    postService - ->> userRepository : **Calls**\n//<size:12>[Java method]</size>//
+    userService - ->> userRepository : **Calls**\n//<size:12>[Java method]</size>//
+    syncController - ->> syncService : **Calls**\n//<size:12>[Java method]</size>//
+    syncService - ->> postRepository : **Calls**\n//<size:12>[Java method]</size>//
+    syncService - ->> userRepository : **Calls**\n//<size:12>[Java method]</size>//
+    postRepository - ->> db : **Reads from and writes to**\n//<size:12>[JDBC]</size>//
+    userRepository - ->> db : **Reads from and writes to**\n//<size:12>[JDBC]</size>//
+}
+
+rectangle "==Json Placeholder\n\n Legacy blog app" <<external_system>> as jsonplaceholder 
+
+admin - ->> syncController : **Triggers**\n//<size:12>[REST/HTTP]</size>//
+spa - ->> postController : **Consumes**\n//<size:12>[REST/HTTP]</size>//
+syncService - ->> jsonplaceholder : **Pulls users and posts data**\n//<size:12>[REST/HTTP]</size>//
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 07:26:11 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

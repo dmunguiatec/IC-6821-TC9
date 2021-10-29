@@ -1,0 +1,42 @@
+@startuml
+
+title [Code] Blog Post Controller
+
+package edu.tec.ic6821.blog {
+    package posts {
+
+        class PostController {
+            findByExtId(:String): PostDTO
+        }
+
+        interface PostService {
+            findByUserExtId(:String): Optional<List<Post>>
+            findByExtId(:String): Optional<Post>
+        }
+
+        PostController --> PostService
+
+        class PostDTO {
+            - extId: String
+            - title: String
+            - body: String
+            + {static} from(:Post): PostDTO
+        }
+
+        PostController ..> PostDTO
+    }
+
+    package model.posts {
+        class Post {
+            - integrationId: Long
+            - userIntegrationId: Long
+            - userId: Long
+            - title: String
+            - body: String
+        }
+    }
+
+    PostService ..> Post
+}
+
+@enduml
