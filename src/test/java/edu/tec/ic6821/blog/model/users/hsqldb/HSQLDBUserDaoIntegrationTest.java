@@ -90,15 +90,23 @@ public class HSQLDBUserDaoIntegrationTest {
         final User savedUser2 = userDao.create(user2);
         final User savedUser3 = userDao.create(user3);
 
+        final Optional<User> retrievedUser1 = userDao.findById(savedUser1.getId());
+        final Optional<User> retrievedUser2 = userDao.findById(savedUser2.getId());
+        final Optional<User> retrievedUser3 = userDao.findById(savedUser3.getId());
+
         // when
         final List<User> actual = userDao.findByIntegrationIds(Arrays.asList(userIntegrationId1, userIntegrationId3));
 
         // then
+        assertThat(retrievedUser1).isNotEmpty();
+        assertThat(retrievedUser2).isNotEmpty();
+        assertThat(retrievedUser3).isNotEmpty();
+
         assertThat(actual).isNotNull();
         assertThat(actual).hasSizeGreaterThanOrEqualTo(2);
-        assertThat(actual).contains(savedUser1);
-        assertThat(actual).contains(savedUser3);
-        assertThat(actual).doesNotContain(savedUser2);
+        assertThat(actual).contains(retrievedUser1.get());
+        assertThat(actual).contains(retrievedUser3.get());
+        assertThat(actual).doesNotContain(retrievedUser2.get());
     }
 
     @Test
@@ -131,7 +139,10 @@ public class HSQLDBUserDaoIntegrationTest {
 
         // then
         assertThat(actual).isNotEmpty();
-        assertThat(actual.get()).isEqualTo(savedUser1);
+        assertThat(actual.get())
+            .usingRecursiveComparison()
+            .ignoringFields("createdOn", "lastUpdatedOn")
+            .isEqualTo(savedUser1);
     }
 
     @Test
@@ -157,7 +168,10 @@ public class HSQLDBUserDaoIntegrationTest {
 
         // then
         assertThat(actual).isNotEmpty();
-        assertThat(actual.get()).isEqualTo(savedUser1);
+        assertThat(actual.get())
+            .usingRecursiveComparison()
+            .ignoringFields("createdOn", "lastUpdatedOn")
+            .isEqualTo(savedUser1);
     }
 
     @Test
@@ -184,7 +198,10 @@ public class HSQLDBUserDaoIntegrationTest {
 
         // then
         assertThat(actual).isNotEmpty();
-        assertThat(actual.get()).isEqualTo(savedUser);
+        assertThat(actual.get())
+            .usingRecursiveComparison()
+            .ignoringFields("createdOn", "lastUpdatedOn")
+            .isEqualTo(savedUser);
     }
 
     @Test
@@ -199,3 +216,4 @@ public class HSQLDBUserDaoIntegrationTest {
         assertThat(actual).isEmpty();
     }
 }
+

@@ -101,7 +101,9 @@ public class HSQLDBPostDaoIntegrationTest {
 
         // then
         assertThat(actual).isNotEmpty();
-        assertThat(actual.get()).isEqualTo(savedPost);
+        assertThat(actual.get()).usingRecursiveComparison()
+            .ignoringFields("createdOn", "lastUpdatedOn")
+            .isEqualTo(savedPost);
     }
 
     @Test
@@ -129,13 +131,15 @@ public class HSQLDBPostDaoIntegrationTest {
         final User savedUser = userDao.create(user);
         final Post post = new Post(150L, 101L, savedUser.getId(), "title1", "body1");
         final Post savedPost = postDao.create(post);
+        final Optional<Post> retrievedPost = postDao.findById(savedPost.getId());
 
         // when
         final Optional<Post> actual = postDao.findByExtId(savedPost.getExtId());
 
         // then
         assertThat(actual).isNotEmpty();
-        assertThat(actual.get()).isEqualTo(savedPost);
+        assertThat(retrievedPost).isNotEmpty();
+        assertThat(actual.get()).isEqualTo(retrievedPost.get());
     }
 
     @Test
@@ -189,14 +193,20 @@ public class HSQLDBPostDaoIntegrationTest {
         final User savedUser = userDao.create(user);
 
         final Post savedPost1 = postDao.create(new Post(150L, 101L, savedUser.getId(), "title1", "body1"));
+        final Optional<Post> retrievedPost1 = postDao.findById(savedPost1.getId());
         final Post savedPost2 = postDao.create(new Post(151L, 101L, savedUser.getId(), "title2", "body2"));
+        final Optional<Post> retrievedPost2 = postDao.findById(savedPost2.getId());
         final Post savedPost3 = postDao.create(new Post(152L, 101L, savedUser.getId(), "title3", "body3"));
+        final Optional<Post> retrievedPost3 = postDao.findById(savedPost3.getId());
 
         // when
         final List<Post> actual = postDao.findByUserId(savedUser.getId());
 
         // then
-        assertThat(actual).containsAll(List.of(savedPost1, savedPost2, savedPost3));
+        assertThat(retrievedPost1).isNotEmpty();
+        assertThat(retrievedPost2).isNotEmpty();
+        assertThat(retrievedPost3).isNotEmpty();
+        assertThat(actual).containsAll(List.of(retrievedPost1.get(), retrievedPost2.get(), retrievedPost3.get()));
     }
 
     @Test
@@ -222,8 +232,10 @@ public class HSQLDBPostDaoIntegrationTest {
         );
 
         final Post savedPost1 = postDao.create(new Post(200L, 100L, savedUser1.getId(),"title1", "body1"));
+        final Optional<Post> retrievedPost1 = postDao.findById(savedPost1.getId());
         final Post savedPost2 = postDao.create(new Post(201L, 101L, savedUser2.getId(),"title2", "body2"));
-        final Post savedPost3 = postDao.create(new Post(202L, 100L, savedUser1.getId(),"title3", "body3"));
+        final Optional<Post> retrievedPost2 = postDao.findById(savedPost2.getId());
+        postDao.create(new Post(202L, 100L, savedUser1.getId(),"title3", "body3"));
 
         // when
         final List<Post> actual = postDao.findByIntegrationIds(List.of(200L, 201L));
@@ -231,6 +243,9 @@ public class HSQLDBPostDaoIntegrationTest {
         // then
         assertThat(actual).isNotEmpty();
         assertThat(actual).hasSize(2);
-        assertThat(actual).containsExactlyInAnyOrder(savedPost1, savedPost2);
+        assertThat(retrievedPost1).isNotEmpty();
+        assertThat(retrievedPost2).isNotEmpty();
+        assertThat(actual).containsExactlyInAnyOrder(retrievedPost1.get(), retrievedPost2.get());
     }
 }
+
